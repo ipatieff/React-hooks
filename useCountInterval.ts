@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-function useCounterInterval(callback: () => void, delay: number, count: number) {
+function useCountInterval(callback: () => void, delay: number, count: number) {
   const savedCallback = useRef<ReturnType<typeof setInterval>>();
 
   useEffect(() => {
@@ -22,4 +22,4 @@ function useCounterInterval(callback: () => void, delay: number, count: number) 
   }, [delay, count]);
 }
 
-export default useCounterInterval;
+export default useCountInterval;

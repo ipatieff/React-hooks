@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-function useInterval(callback: () => void, delay: number, count: number) {
+function useCounterInterval(callback: () => void, delay: number, count: number) {
   const savedCallback = useRef<ReturnType<typeof setInterval>>();
 
   useEffect(() => {
@@ -22,4 +22,4 @@ function useInterval(callback: () => void, delay: number, count: number) {
   }, [delay, count]);
 }
 
-export default useInterval;
+export default useCounterInterval;

@@ -27,7 +27,7 @@ export default useCountInterval;
 /** Usage:
 *   const [counter, setCounter] = useState(60);
 *
-*  useInterval(
+*  useCountInterval(
 *    () => {
 *      setCounter(counter - 1);
 *    },

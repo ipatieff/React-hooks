@@ -24,22 +24,22 @@ function useCountInterval(callback: () => void, delay: number, count: number) {
 
 export default useCountInterval;
 
-/* Usage:
+/** Usage:
 *   const [counter, setCounter] = useState(60);
-
-  useInterval(
-    () => {
-      setCounter(counter - 1);
-    },
-    1000,
-    counter,
-  );
+*
+*  useInterval(
+*    () => {
+*      setCounter(counter - 1);
+*    },
+*    1000,
+*    counter,
+*  );
 *
 * <TimerCode
-    value={counter}
-    reSend={handleResendCode}
-    resendMessage="Resend code"
-  />
-*  */
+*    value={counter}
+*    reSend={handleResendCode}
+*    resendMessage="Resend code"
+*  />
+*  **/
 
 

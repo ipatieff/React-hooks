@@ -18,3 +18,11 @@ function useThrottle(func: VoidFunction, delay: number) {
 }
 
 export default useThrottle;
+
+
+/** Usage:
+ *
+ * const handleClick = useThrottle(() => console.log('Do click'), 1500);
+ *
+ * **/
+

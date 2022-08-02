@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 function useCountInterval(callback: () => void, delay: number, count: number) {
-  const savedCallback = useRef<ReturnType<typeof setInterval>>();
+  const savedCallback = useRef(callback);
 
   useEffect(() => {
     savedCallback.current = callback;
@@ -12,7 +12,7 @@ function useCountInterval(callback: () => void, delay: number, count: number) {
 
     function tick() {
       if (count > 0) {
-        savedCallback.current();
+        savedCallback?.current();
       } else {
         clearInterval(interval);
       }
